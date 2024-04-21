@@ -1,0 +1,31 @@
+<!-- Plantilla para el Reporte de la venta -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reporte del Pedido</title>
+</head>
+<body>
+    <h1>Reporte del Pedido</h1>
+    <h2>Datos del usuario</h2>
+    <p>Nombre: {{ nombre }}</p>
+    <p>Dirección: {{ direccion }}</p>
+    <p>Teléfono: {{ telefono }}</p>
+    <h2>Producto seleccionado</h2>
+    <p>Nombre del producto: {{ producto.nombre }}</p>
+    <p>Precio del producto: {{ producto.precio }}</p>
+    <h2>Forma de Pago</h2>
+    <p>{{ pago }}</p>
+    <h2>Tipo de envio</h2>
+    <p>{{ envio }}</p>
+    <h2>Observaciones</h2>
+    <p>{{ observaciones }}</p>
+    <h1>Operacion exitosa..</h1>
+    <p>Muchas gracias por visitar la Farmacia <i>Samblas</i></p><br>
+    <i>YA COMPRASTE, YA TE VAS..</i></p>
+    <br>
+    <footer>
+        <p>Farmacia Samblas - Todos los derechos reservados © 2024</p>
+    </footer>
+</body>
+</html>
+

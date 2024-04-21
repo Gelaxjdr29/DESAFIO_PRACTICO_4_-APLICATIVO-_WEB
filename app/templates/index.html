@@ -1,0 +1,47 @@
+<!-- Plantilla Del index (es decir, la plantilla raiz.) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestion de pedidos</title>
+</head>
+<body>
+    <h1> Farmacia <i>Samblas</i></h1>
+    <h2><i>Ya compraste, Ya te vas</i></h2>
+    <h2>Formulario de clientes</h2>
+    <form action="/submit" method="post">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="direccion">Dirección:</label><br>
+        <input type="text" id="direccion" name="direccion"><br>
+        <label for="telefono">Teléfono:</label><br>
+        <input type="text" id="telefono" name="telefono"><br>
+        <h1>Productos de Farmacia</h1>
+        {% for producto in productos %}
+        <input type="radio" id="{{ producto.nombre }}" name="producto" value="{{ producto.nombre }}">
+        <label for="{{ producto.nombre }}">{{ producto.nombre }} - {{ producto.precio }}</label><br>
+        {% endfor %}
+        <h1><i>Forma de Pago</i></h1>
+        <select name="pago">
+            <option value="Efectivo">Efectivo</option>
+            <option value="Divisas">Divisas</option>
+            <option value="Tarjeta de credito">Tarjeta de Crédito</option>
+            <option value="Tarjeta de debito">Tarjeta de Débito</option>
+        </select>
+        <h1><i>Forma de envio</i></h1>
+        <select name="envio">
+            <option value="Retiro">Retiro por caja</option>
+            <option value="Delivery">Delivery</option>
+        </select>
+        <h1>Observaciones</h1>
+        <textarea name="observaciones" rows="4" cols="50"></textarea>
+        <br>
+        <footer>
+            <p>Farmacia Samblas - Todos los derechos reservados © 2024</p>
+        </footer>
+        <br>
+        <input type="submit" value="Enviar el pedido">
+    </form>
+</body>
+</html>
+
+
